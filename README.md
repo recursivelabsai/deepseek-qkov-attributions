@@ -1,6 +1,6 @@
 <div align="center">
 
-# **`deepseek qkov attributions`**
+# **`DeepSeek QKOV Attributions`**
 
 ## Live QK/OV interpretability attributions SVGs from DeepSeek. 
 ## Welcome to Symbolic Interpretability!
