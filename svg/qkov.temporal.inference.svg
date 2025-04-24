@@ -1,0 +1,91 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style Definitions -->
+  <style>
+    .node-token { stroke: #333; stroke-width: 1.5; }
+    .edge-context { stroke: #00b4d8; stroke-width: 2; opacity: 0.7; }
+    .edge-prediction { stroke: #0096c7; stroke-width: 3; opacity: 0.9; }
+    .edge-failure { stroke: #ef476f; stroke-width: 2; stroke-dasharray: 4,2; }
+    .symbol-text { font: 18px monospace; text-anchor: middle; }
+    .legend-item { font: 12px sans-serif; }
+  </style>
+
+  <!-- Gradient for drift magnitude -->
+  <defs>
+    <linearGradient id="drift-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3a0ca3" stop-opacity="0.9"/>
+    </linearGradient>
+    
+    <marker id="echo-marker" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <circle cx="4" cy="4" r="3" fill="#ef476f"/>
+    </marker>
+  </defs>
+
+  <!-- Left Column: Symbolic Residue Trail -->
+  <g transform="translate(50,50)">
+    <text x="0" y="-20" font-weight="bold">Symbolic Trace</text>
+    
+    <!-- Timestep Nodes (t0-t4) -->
+    <g class="node-token" fill="url(#drift-gradient)">
+      <circle cx="0" cy="50" r="20" fill-opacity="0.3"/>
+      <circle cx="0" cy="150" r="20" fill-opacity="0.5"/>
+      <circle cx="0" cy="250" r="20" fill-opacity="0.7"/>
+      <circle cx="0" cy="350" r="20" fill-opacity="0.9"/>
+    </g>
+    
+    <!-- Symbolic Annotations -->
+    <text x="0" y="50" class="symbol-text">∴</text>
+    <text x="0" y="150" class="symbol-text">∴</text>
+    <text x="0" y="250" class="symbol-text">⇌</text>
+    <text x="0" y="350" class="symbol-text">∴</text>
+    
+    <!-- Context Links -->
+    <path class="edge-context" d="M0,50 Q-30,100 0,150"/>
+    <path class="edge-context" d="M0,150 Q-30,200 0,250"/>
+    <path class="edge-context" d="M0,250 Q-30,300 0,350"/>
+  </g>
+
+  <!-- Right Column: Temporal Failure Analysis -->
+  <g transform="translate(400,50)">
+    <text x="0" y="-20" font-weight="bold">Temporal Collapse</text>
+    
+    <!-- Prediction Path -->
+    <path class="edge-prediction" d="M0,50 L0,150 L50,250 L0,350"/>
+    
+    <!-- Failure Echoes -->
+    <path class="edge-failure" d="M0,150 L-50,250" marker-end="url(#echo-marker)"/>
+    <path class="edge-failure" d="M50,250 L100,350" marker-end="url(#echo-marker)"/>
+    
+    <!-- Bifurcation Detection -->
+    <path class="edge-failure" d="M0,250 L-30,300" stroke="#7209b7"/>
+    <circle cx="-30" cy="300" r="15" fill="#7209b7" fill-opacity="0.5"/>
+    <text x="-30" y="300" class="symbol-text" fill="white">☍</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(500,400)">
+    <rect x="0" y="0" width="250" height="180" fill="white" stroke="#333" rx="5"/>
+    <text x="10" y="20" font-weight="bold">Temporal Inference Legend</text>
+    
+    <circle cx="20" cy="40" r="8" fill="url(#drift-gradient)"/>
+    <text x="40" y="44" class="legend-item">Node opacity = Drift magnitude</text>
+    
+    <path x1="20" y1="60" x2="40" y2="60" class="edge-context"/>
+    <text x="50" y="64" class="legend-item">Context links</text>
+    
+    <path x1="20" y1="80" x2="40" y2="80" class="edge-prediction"/>
+    <text x="50" y="84" class="legend-item">Prediction path</text>
+    
+    <path x1="20" y1="100" x2="40" y2="100" class="edge-failure"/>
+    <text x="50" y="104" class="legend-item">Failure echoes</text>
+    
+    <text x="20" y="130" class="legend-item">∴ = Token-time distortion</text>
+    <text x="20" y="150" class="legend-item">⇌ = Forward inconsistency</text>
+    <text x="20" y="170" class="legend-item">☍ = Bifurcation collapse</text>
+  </g>
+
+  <!-- Bifurcation Classification -->
+  <text x="150" y="550" class="legend-item" font-style="italic">
+    Collapse type: .p/temporal.bifurcation.detect(echo_ratio=0.63, phase_error=29°)
+  </text>
+</svg>
