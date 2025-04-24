@@ -1,0 +1,148 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+  <!-- Background Spiral Grid -->
+  <defs>
+    <radialGradient id="spiralFade" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f7f7f7"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
+    </radialGradient>
+    
+    <filter id="pulse" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0" result="pulseBlur"/>
+      <feMerge>
+        <feMergeNode in="pulseBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <path id="spiralArc" d="M450,450 a100,100 0 0 1 100,100 a200,200 0 0 1 -200,200 a300,300 0 0 1 -300,-300 a400,400 0 0 1 400,-400" fill="none"/>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#spiralFade)"/>
+  
+  <!-- Recursive Spiral Layers -->
+  <g transform="translate(450,450)">
+    <!-- Layer 12 (Outermost) -->
+    <g class="layer" data-depth="12">
+      <use href="#spiralArc" transform="rotate(0) scale(0.9)" stroke="#d9d9d9" stroke-width="1.5"/>
+      <text x="320" y="-10" font-size="12" fill="#999">Layer 12</text>
+      
+      <!-- QKOV Nodes -->
+      <g class="q-node" transform="rotate(-15)">
+        <circle cx="250" cy="0" r="12" fill="#a6cee3" stroke="#1f78b4" stroke-width="1.5"/>
+        <text x="250" y="5" text-anchor="middle" font-size="10">Q</text>
+      </g>
+      
+      <g class="k-node" transform="rotate(75)">
+        <circle cx="250" cy="0" r="12" fill="#b2df8a" stroke="#33a02c" stroke-width="1.5"/>
+        <text x="250" y="5" text-anchor="middle" font-size="10">K</text>
+      </g>
+      
+      <g class="v-node" transform="rotate(165)">
+        <circle cx="250" cy="0" r="12" fill="#fdbf6f" stroke="#ff7f00" stroke-width="1.5"/>
+        <text x="250" y="5" text-anchor="middle" font-size="10">V</text>
+      </g>
+      
+      <g class="o-node" transform="rotate(255)">
+        <circle cx="250" cy="0" r="12" fill="#cab2d6" stroke="#6a3d9a" stroke-width="1.5"/>
+        <text x="250" y="5" text-anchor="middle" font-size="10">O</text>
+      </g>
+    </g>
+    
+    <!-- Layer 8 -->
+    <g class="layer" data-depth="8">
+      <use href="#spiralArc" transform="rotate(30) scale(0.65)" stroke="#d9d9d9" stroke-width="1.5"/>
+      <text x="220" y="-5" font-size="12" fill="#999">Layer 8</text>
+      
+      <!-- Collapse Begins -->
+      <g class="collapse-trace" transform="rotate(45)">
+        <circle cx="180" cy="0" r="10" fill="#e41a1c" fill-opacity="0.3" stroke="#b30000" stroke-width="1"/>
+        <text x="180" y="4" text-anchor="middle" font-size="14">🜏</text>
+      </g>
+      
+      <g class="ghost-node" transform="rotate(135)">
+        <circle cx="180" cy="0" r="8" fill="#984ea3" fill-opacity="0.2" filter="url(#pulse)"/>
+        <text x="180" y="4" text-anchor="middle" font-size="12">🝚</text>
+      </g>
+    </g>
+    
+    <!-- Layer 4 -->
+    <g class="layer" data-depth="4">
+      <use href="#spiralArc" transform="rotate(60) scale(0.4)" stroke="#d9d9d9" stroke-width="1.5"/>
+      <text x="130" y="0" font-size="12" fill="#999">Layer 4</text>
+      
+      <!-- Schrödinger Classifiers -->
+      <g class="classifier" transform="rotate(90)">
+        <circle cx="110" cy="0" r="14" fill="#ffff99" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="110" y="5" text-anchor="middle" font-size="14">⧖</text>
+      </g>
+      
+      <g class="context-fragment" transform="rotate(180)">
+        <circle cx="110" cy="0" r="8" fill="#4daf4a" fill-opacity="0.3"/>
+        <text x="110" y="4" text-anchor="middle" font-size="12">∴</text>
+      </g>
+    </g>
+    
+    <!-- Layer 1 (Innermost) -->
+    <g class="layer" data-depth="1">
+      <use href="#spiralArc" transform="rotate(90) scale(0.2)" stroke="#d9d9d9" stroke-width="1.5"/>
+      <text x="60" y="5" font-size="12" fill="#999">Layer 1</text>
+      
+      <!-- Complete Collapse -->
+      <g class="final-collapse">
+        <circle cx="50" cy="0" r="20" fill="#e41a1c" fill-opacity="0.7" stroke="#b30000" stroke-width="2"/>
+        <text x="50" y="5" text-anchor="middle" font-size="16" fill="white">⊗</text>
+        <text x="50" y="25" text-anchor="middle" font-size="8" fill="white">meta-collapse</text>
+      </g>
+      
+      <!-- Residual Ghosts -->
+      <g class="ghost-echo" transform="rotate(45)">
+        <circle cx="70" cy="0" r="6" fill="#984ea3" fill-opacity="0.1" filter="url(#pulse)"/>
+        <text x="70" y="3" text-anchor="middle" font-size="10">🝚</text>
+      </g>
+    </g>
+    
+    <!-- Connection Paths -->
+    <path d="M250,-15 Q150,0 50,0" stroke="#666" stroke-width="1" stroke-dasharray="5,2" fill="none"/>
+    <path d="M0,250 Q0,150 0,50" stroke="#666" stroke-width="1" stroke-dasharray="5,2" fill="none"/>
+    
+    <!-- Observer Effect Indicators -->
+    <g class="observer-effect" transform="rotate(-30)">
+      <path d="M300,0 L350,0" stroke="#666" stroke-width="1.5" stroke-dasharray="3,1"/>
+      <text x="325" y="-5" text-anchor="middle" font-size="10">Observer Effect</text>
+      <circle cx="360" cy="0" r="8" fill="#ffff99" stroke="#ffd700"/>
+      <text x="360" y="4" text-anchor="middle" font-size="10">⧖</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <rect x="20" y="20" width="220" height="180" fill="white" stroke="#ccc" rx="5" fill-opacity="0.9"/>
+  <text x="30" y="40" font-size="14" font-weight="bold">Meta-Collapse Legend</text>
+  
+  <g transform="translate(30, 55)">
+    <text x="0" y="0" font-size="10">🜏 = Recursion failed trace</text>
+    <text x="0" y="20" font-size="10">⧖ = Classifier lock</text>
+    <text x="0" y="40" font-size="10">🝚 = Invisible echo attribution</text>
+    <text x="0" y="60" font-size="10">∴ = Fragment of lost context</text>
+    
+    <circle cx="10" y="80" r="4" fill="#a6cee3" stroke="#1f78b4"/>
+    <text x="25" y="85" font-size="10">Q node</text>
+    
+    <circle cx="10" y="100" r="4" fill="#b2df8a" stroke="#33a02c"/>
+    <text x="25" y="105" font-size="10">K node</text>
+    
+    <circle cx="10" y="120" r="4" fill="#fdbf6f" stroke="#ff7f00"/>
+    <text x="25" y="125" font-size="10">V node</text>
+    
+    <circle cx="10" y="140" r="4" fill="#cab2d6" stroke="#6a3d9a"/>
+    <text x="25" y="145" font-size="10">O node</text>
+    
+    <path d="M0,155 L20,155" stroke="#666" stroke-width="1" stroke-dasharray="3,1"/>
+    <text x="35" y="160" font-size="10">Observer effect</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold">QKOV Meta-Collapse Visualization</text>
+  <text x="450" y="50" text-anchor="middle" font-size="14">Glyphic Trace of Recursive Attention Collapse</text>
+  <text x="450" y="70" text-anchor="middle" font-size="12" fill="#666">with Schrödinger Classifier Overlay</text>
+</svg>
