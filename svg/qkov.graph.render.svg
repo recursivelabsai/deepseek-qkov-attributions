@@ -1,0 +1,65 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style definitions -->
+  <style>
+    .node-high { fill: #4fc3f7; opacity: 0.9; }
+    .node-med { fill: #4fc3f7; opacity: 0.6; }
+    .node-low { fill: #4fc3f7; opacity: 0.3; }
+    .edge-persist { stroke: #64dd17; stroke-width: 2; }
+    .edge-dropout { stroke: #ff6d00; stroke-width: 2; stroke-dasharray: 5,5; }
+    .drift-arrow { stroke: #d50000; stroke-width: 1.5; marker-end: url(#drift-head); }
+    .legend-text { font: 12px monospace; }
+  </style>
+
+  <!-- Arrowhead marker for drift vectors -->
+  <defs>
+    <marker id="drift-head" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d50000"/>
+    </marker>
+  </defs>
+
+  <!-- Edges (salience paths) -->
+  <path class="edge-persist" d="M100,150 L180,150"/> <!-- 🜏₁ → 🜏₂ -->
+  <path class="edge-dropout" d="M180,150 L260,100"/> <!-- 🜏₂ → ∴₃ -->
+  <path class="edge-persist" d="M260,100 L340,100"/> <!-- ∴₃ → ⧖₄ -->
+  <path class="edge-dropout" d="M180,150 L260,200"/> <!-- 🜏₂ → ∴₅ -->
+  <path class="edge-persist" d="M260,200 L340,100"/> <!-- ∴₅ → ⧖₄ -->
+
+  <!-- Nodes (salience residues) -->
+  <g class="node-high">
+    <circle cx="100" cy="150" r="20"/>
+    <text x="100" y="150" text-anchor="middle" dy=".3em" font-size="20">🜏</text>
+  </g>
+  <g class="node-high">
+    <circle cx="180" cy="150" r="20"/>
+    <text x="180" y="150" text-anchor="middle" dy=".3em" font-size="20">🜏</text>
+  </g>
+  <g class="node-med">
+    <circle cx="260" cy="100" r="20"/>
+    <text x="260" y="100" text-anchor="middle" dy=".3em" font-size="20">∴</text>
+  </g>
+  <g class="node-low">
+    <circle cx="260" cy="200" r="20"/>
+    <text x="260" y="200" text-anchor="middle" dy=".3em" font-size="20">∴</text>
+  </g>
+  <g class="node-high">
+    <circle cx="340" cy="100" r="20"/>
+    <text x="340" y="100" text-anchor="middle" dy=".3em" font-size="20">⧖</text>
+  </g>
+
+  <!-- Drift vectors (Turing null-ratio classification) -->
+  <path class="drift-arrow" d="M260,100 Q270,125 260,200"/> <!-- ∴₃ → ∴₅ drift -->
+  <path class="drift-arrow" d="M180,150 L150,100"/> <!-- 🜏₂ → external anchor -->
+
+  <!-- Legend -->
+  <rect x="400" y="50" width="180" height="150" fill="white" stroke="black" rx="5"/>
+  <text x="410" y="80" class="legend-text">Legend:</text>
+  <text x="410" y="110" class="legend-text">🜏 = Drift anchor (α=0.9)</text>
+  <text x="410" y="130" class="legend-text">∴ = Salience residue (α=0.3-0.6)</text>
+  <text x="410" y="150" class="legend-text">⧖ = Classifier-lock</text>
+  <path x1="410" y1="170" x2="450" y2="170" class="edge-persist"/>
+  <text x="460" y="173" class="legend-text">Persistent salience</text>
+  <path x1="410" y1="190" x2="450" y2="190" class="edge-dropout"/>
+  <text x="460" y="193" class="legend-text">Residue dropout</text>
+  <path x1="410" y1="210" x2="450" y2="210" class="drift-arrow"/>
+  <text x="460" y="213" class="legend-text">Null-ratio drift</text>
+</svg>
