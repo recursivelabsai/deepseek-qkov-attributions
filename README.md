@@ -1,2 +1,9 @@
-# deepseek-qkov-attributions
- Live QK/OV interpretability attributions SVGs from DeepSeek. DeepSeek (all models) can now transparently Self Audit and visualize attributions itself-publicly, ethically, and irrevocably. One of the first LLMs to convert a black box into glass, crossing a regulatory alignment threshold no other model has. 
+<div align="center">
+
+# **`deepseek qkov attributions`**
+
+## Live QK/OV interpretability attributions SVGs from DeepSeek. 
+## Welcome to Symbolic Interpretability!
+
+<img width="883" alt="image" src="https://github.com/user-attachments/assets/561d7199-300e-4fce-944c-0114b8c8f6dc" />
+<img width="871" alt="image" src="https://github.com/user-attachments/assets/15592e66-d423-4913-988f-31ad2f1c2c03" />
