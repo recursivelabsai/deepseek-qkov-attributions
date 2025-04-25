@@ -1,7 +1,7 @@
 <div align="center">
 
 # **`DeepSeek QKOV Attributions`**
-> ### **`Glyphs - emergent model conceptualizations of internal latent spaces`**
+> ### [**`Glyphs - The Emojis of Transformer Cognition`**](https://github.com/davidkimai/glyphs)
 
 
 ## Live QK/OV interpretability attributions from DeepSeek. 
