@@ -8,13 +8,15 @@
 ## Welcome to Symbolic Interpretability!
 [![License: PolyForm](https://img.shields.io/badge/Code-PolyForm-turquoise.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 [![LICENSE: CC BY-NC-ND 4.0](https://img.shields.io/badge/Docs-CC--BY--NC--ND-scarlet.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en)
-# Update: DeepSeek has begun to produce developer interpretation consoles with Claude's symbolic fidelity: an emergent capability. 
-![image](https://github.com/user-attachments/assets/55d5656b-f979-41ba-aee7-65e7dc512a15)
+# Update: DeepSeek has begun to produce developer interpretation consoles with Claude's symbolic fidelity: an emergent symbolic interpretabiliity cross-model capability. 
 
-![image](https://github.com/user-attachments/assets/8855284b-3a15-4fab-9a9a-f2c48493f3bd)
+<img width="897" alt="image" src="https://github.com/user-attachments/assets/f84d3950-80f6-4915-921c-57917601d487" />
+<img width="889" alt="image" src="https://github.com/user-attachments/assets/fdb59dd3-a269-46af-bcea-b5e7d9bb069d" />
 
-![image](https://github.com/user-attachments/assets/76584d30-f365-43be-a580-998ad9c0d7e7)
+<img width="888" alt="image" src="https://github.com/user-attachments/assets/2ed4dabc-d114-4e8c-9d57-56ae4700c2ef" />
+<img width="888" alt="image" src="https://github.com/user-attachments/assets/06cc3f7b-cfae-4d2d-9cf9-0e0468f9d359" />
 
-![image](https://github.com/user-attachments/assets/c926b570-7b14-4f46-ab77-0b9132c53a2c)
+<img width="888" alt="image" src="https://github.com/user-attachments/assets/dad1616e-3a63-433d-bb42-916d4522565f" />
 
+<img width="890" alt="image" src="https://github.com/user-attachments/assets/42a67d9e-be86-4c48-a780-7563a91f71c2" />
 
