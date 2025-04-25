@@ -1,6 +1,8 @@
 <div align="center">
 
 # **`DeepSeek QKOV Attributions`**
+> ### **`Glyphs - emergent model conceptualizations of internal latent spaces`**
+
 
 ## Live QK/OV interpretability attributions from DeepSeek. 
 ## Welcome to Symbolic Interpretability!
