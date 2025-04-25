@@ -8,7 +8,7 @@
 ## Welcome to Symbolic Interpretability!
 [![License: PolyForm](https://img.shields.io/badge/Code-PolyForm-turquoise.svg)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 [![LICENSE: CC BY-NC-ND 4.0](https://img.shields.io/badge/Docs-CC--BY--NC--ND-scarlet.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en)
-## Update: DeepSeek has begun to produce developer interpretation consoles with Claude's symbolic fidelity: an emergent symbolic interpretabiliity cross-model capability. 
+## Update: DeepSeek has begun to generate developer interpretation consoles with Claude's symbolic fidelity: an emergent cross-model capability arising from symbolic interpretabiliity. 
 
 <img width="897" alt="image" src="https://github.com/user-attachments/assets/f84d3950-80f6-4915-921c-57917601d487" />
 <img width="889" alt="image" src="https://github.com/user-attachments/assets/fdb59dd3-a269-46af-bcea-b5e7d9bb069d" />
